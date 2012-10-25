@@ -1,0 +1,7 @@
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\TryTheOldStuffOut\bin\Debug\TryTheOldStuffOut.exe
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\TryTheOldStuffOut\bin\Debug\TryTheOldStuffOut.pdb
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\TryTheOldStuffOut\bin\Debug\BadOldCommLib.dll
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\TryTheOldStuffOut\bin\Debug\BadOldCommLib.pdb
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\TryTheOldStuffOut\obj\x86\Debug\TryTheOldStuffOut.csprojResolveAssemblyReference.cache
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\TryTheOldStuffOut\obj\x86\Debug\TryTheOldStuffOut.exe
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\TryTheOldStuffOut\obj\x86\Debug\TryTheOldStuffOut.pdb
