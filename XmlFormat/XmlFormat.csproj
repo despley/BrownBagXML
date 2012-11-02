@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1F811F43-F190-45C6-A076-B56D38C98277}</ProjectGuid>
+    <ProjectGuid>{9C9CCDF7-5C9D-4A56-90B6-0AB4D82B8E2A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BadOldCommLib</RootNamespace>
-    <AssemblyName>BadOldCommLib</AssemblyName>
+    <RootNamespace>XmlFormat</RootNamespace>
+    <AssemblyName>XmlFormat</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,9 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SmokeSignals.cs" />
-    <Compile Include="SnailMail.cs" />
-    <Compile Include="Telephone.cs" />
+    <Compile Include="XmlPartyDataLoader.cs" />
+    <Compile Include="XmlPartyInvites.designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="XmlPartyInvites.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="XmlPartyInvites.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

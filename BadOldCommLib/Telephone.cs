@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading;
 
 namespace BadOldCommLib
@@ -18,6 +19,10 @@ namespace BadOldCommLib
 
         public bool MakeCall()
         {
+            if (Number.Length < 1)
+                throw new Exception("This 'telephone number' contains no digits!!!! bbbllllllllllllllllllluuuurrrrrggghhhhhhhhhhhh");
+            if (Number.ToCharArray().Any(c => !Char.IsNumber(c)))
+                throw new Exception("This 'telephone number' contains invalid digits!!!! bbbllllllllllllllllllluuuurrrrrggghhhhhhhhhhhh");
             Console.WriteLine(String.Format("Making call to: {0} ", Number ));
             Console.WriteLine("dialling....");
             Thread.Sleep(1000);
