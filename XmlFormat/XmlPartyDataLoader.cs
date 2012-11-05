@@ -6,11 +6,16 @@ namespace XmlFormat
     {
        public void PlayWithXml()
        {
-           var partyXml = EntityBase<XmlPartyParty>.LoadFromFile("XmlPartyInvites.xml");
-           foreach (attendeeType invite  in partyXml.Invite)
+           var partyXml = EntityBase<XmlParty>.LoadFromFile("XmlPartyInvites.xml");
+           foreach (XmlPartyParty p in partyXml.Party)
            {
-               Console.WriteLine(invite.id);
+               Console.WriteLine(p.id);
+               foreach (attendeeType attendeeType in p.Invite)
+               {
+                   Console.WriteLine(attendeeType.id);
+                   Console.WriteLine(attendeeType.Item);
 
+               }
            }
        }
     }

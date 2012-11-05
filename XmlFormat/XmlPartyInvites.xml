@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <XmlParty 
   xmlns="http://tempuri.org/XmlPartyInvites.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://tempuri.org XmlPartyInvites.xsd">
+  xsi:schemaLocation="http://tempuri.org/XmlPartyInvites.xsd XmlPartyInvites.xsd">
   <Party id="75aaae10-b42f-49db-9cfe-22322e3943a5">
     <Message>
       Hello, please come to my party - it will be great
@@ -18,10 +18,10 @@
         <SmokeSignal />
       </Attendee>
       <Attendee id="661d4e8f-79d2-4127-a791-7a1c1d27a1d2">
-        <TelephoneCall>01292488599</TelephoneCall>
+        <TelephoneCall>0129248599</TelephoneCall>
       </Attendee>
       <Attendee id="e0e38356-0c8a-430b-add5-8c59775c545f">
-        <TelephoneCall>01292488599</TelephoneCall>
+        <TelephoneCall>02488599</TelephoneCall>
       </Attendee>
       <Attendee id="7fd48a91-7c52-4de6-b155-7b62ec23002c">
         <SmokeSignal />
@@ -36,7 +36,7 @@
         <SnailMail class="FirstClass">19 Baker St, London, W12 4TF</SnailMail>
       </Attendee>
       <Attendee id="eb85302a-ab18-4d87-a434-6cae9d450e2c">
-        <SnailMail class="SecondClass">20 Baker St, London, W12 4TF</SnailMail>
+        <SnailMail class="HandDelivered">20 Baker St, London, W12 4TF</SnailMail>
       </Attendee>
     </Invite>
   </Party>

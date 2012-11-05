@@ -46,11 +46,19 @@
     <Compile Include="XmlPartyInvites.designer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="XmlPartyInvites.xml" />
+    <Content Include="XmlPartyInvites.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Spy.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="XmlPartyInvites.xsd">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

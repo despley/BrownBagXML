@@ -1,5 +1,6 @@
 ﻿using System;
 using BadOldCommLib;
+using XmlFormat;
 
 namespace TryTheOldStuffOut
 {
@@ -73,6 +74,19 @@ namespace TryTheOldStuffOut
                         }
                         Console.WriteLine("Cannot send letter as an invalid stamp was used");
                         break;
+                    case "5":
+                        XmlPartyDataLoader xmlPartyDataLoader = new XmlPartyDataLoader();
+                        try
+                        {
+                            xmlPartyDataLoader.PlayWithXml();
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex);
+                        }
+                        
+                        break;
+
                     default:
                         Console.WriteLine("Invalid option selected");
                         break;

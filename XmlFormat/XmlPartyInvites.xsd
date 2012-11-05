@@ -29,7 +29,7 @@
     <xs:choice>
       <xs:element name="TelephoneCall" type="xs:string" />
       <xs:element name="SmokeSignal">
-        <xs:complexType></xs:complexType>
+        <xs:complexType />
       </xs:element>
       <xs:element name="SnailMail" type="postageType" />
     </xs:choice>
