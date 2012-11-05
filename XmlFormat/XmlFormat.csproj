@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlPartyBase.cs" />
     <Compile Include="XmlPartyDataLoader.cs" />
     <Compile Include="XmlPartyInvites.designer.cs" />
   </ItemGroup>
@@ -52,10 +53,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Spy.xsd">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="XmlPartyInvites.xsd">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
