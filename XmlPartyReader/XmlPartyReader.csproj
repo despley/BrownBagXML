@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9C9CCDF7-5C9D-4A56-90B6-0AB4D82B8E2A}</ProjectGuid>
+    <ProjectGuid>{8BF3C75E-9864-4B84-A16F-FE5DB09C8076}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XmlFormat</RootNamespace>
-    <AssemblyName>XmlFormat</AssemblyName>
+    <RootNamespace>XmlPartyReader</RootNamespace>
+    <AssemblyName>XmlPartyReader</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -33,7 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,15 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IContactable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XmlPartyBase.cs" />
-    <Compile Include="XmlPartyDataLoader.cs" />
-    <Compile Include="XmlPartyInvites.designer.cs" />
-    <Compile Include="XmlReaderXmlParty.cs" />
-    <Compile Include="XmlSmokeSignals.cs" />
-    <Compile Include="XmlSnailMail.cs" />
-    <Compile Include="XmlTelephoneCall.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
