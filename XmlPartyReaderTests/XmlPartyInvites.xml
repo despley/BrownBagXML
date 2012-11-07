@@ -40,4 +40,41 @@
       </Attendee>
     </Invite>
   </Party>
+  <Party id="731db09a-39be-49d8-a75a-bddab653e20d">
+    <Message>
+      This will be a rubbish party - but you can come anyway
+    </Message>
+    <Invite>
+      <Attendee id="661d4e8f-79d2-4127-a791-7a1c1d27a1d3">
+        <TelephoneCall>01292488599</TelephoneCall>
+      </Attendee>
+      <Attendee id="1a4ebb6a-0a7e-4bde-aca3-f158d856c988">
+        <SnailMail class="FirstClass">18 Baker St, London, W12 4TF</SnailMail>
+      </Attendee>
+      <Attendee id="ad13157f-f683-4e13-a4f9-a15f47dae398">
+        <SmokeSignal />
+      </Attendee>
+      <Attendee id="661d4e8f-79d2-4127-a791-7a1c1d27a1d2">
+        <TelephoneCall>0129248599</TelephoneCall>
+      </Attendee>
+      <Attendee id="e0e38356-0c8a-430b-add5-8c59775c545f">
+        <TelephoneCall>02488599</TelephoneCall>
+      </Attendee>
+      <Attendee id="7fd48a91-7c52-4de6-b155-7b62ec23002c">
+        <SmokeSignal />
+      </Attendee>
+      <Attendee id="032180d5-1f3b-4e42-bd12-60609f2e61c3">
+        <TelephoneCall>01292488599</TelephoneCall>
+      </Attendee>
+      <Attendee id="3ca9b05f-d686-4258-b40a-ab57f0518f00">
+        <SnailMail class="SecondClass">18 Baker St, London, W12 4TF</SnailMail>
+      </Attendee>
+      <Attendee id="eb85302a-ab18-4d87-a434-6cae9d450c2c">
+        <SnailMail class="FirstClass">19 Baker St, London, W12 4TF</SnailMail>
+      </Attendee>
+      <Attendee id="eb85302a-ab18-4d87-a434-6cae9d450e2c">
+        <SnailMail class="HandDelivered">20 Baker St, London, W12 4TF</SnailMail>
+      </Attendee>
+    </Invite>
+  </Party>
 </XmlParty>

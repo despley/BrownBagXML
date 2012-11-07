@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlFormat", "XmlFormat\XmlF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{288AEFE6-144D-4CBB-8097-9875306C71BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlPartyReader", "XmlPartyReader\XmlPartyReader.csproj", "{8BF3C75E-9864-4B84-A16F-FE5DB09C8076}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlPartyUtils", "XmlPartyReader\XmlPartyUtils.csproj", "{8BF3C75E-9864-4B84-A16F-FE5DB09C8076}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlPartyReaderTests", "XmlPartyReaderTests\XmlPartyReaderTests.csproj", "{1126BC05-A634-4D98-A0BC-E9DE9B4C9DA6}"
 EndProject

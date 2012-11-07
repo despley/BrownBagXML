@@ -40,7 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attendee.cs" />
+    <Compile Include="ElementToTelephoneCall.cs" />
+    <Compile Include="Invite.cs" />
+    <Compile Include="IPartyFactory.cs" />
+    <Compile Include="Party.cs" />
+    <Compile Include="PartyFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlParty.cs" />
+    <Compile Include="PartyReader.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

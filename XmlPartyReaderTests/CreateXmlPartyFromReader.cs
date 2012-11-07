@@ -1,4 +1,8 @@
-﻿using Xunit;
+﻿using System.Collections.Generic;
+using Moq;
+using XmlPartyReader;
+using Xunit;
+using XmlPartyUtils;
 
 namespace XmlPartyReaderTests
 {
@@ -6,12 +10,52 @@ namespace XmlPartyReaderTests
     public class CreateXmlPartyFromReader
     {
         private const string WorkingXmlPartyFile = "XmlPartyInvites.xml";
-        //Load the Xml and ensure that the relevant classes are populated
+        //Load the Xml and ensure that the party id is set correctly
         [Fact]
-        public void EnsurePartyReaderCanLoadValidXml()
+        public void EnsurePartyReaderCanLoadValidXmlViaPath()
         {
-            var pReader = new XmlPartyReader(WorkingXmlPartyFile);
-            Assert.Equal(10, pReader.Invites[0].Attendee.Count);
+            var party=new XmlParty();
+            var pReader = new PartyReader(WorkingXmlPartyFile, new List<IPartyFactory>(), party );
+            Assert.Equal("75aaae10-b42f-49db-9cfe-22322e3943a5", party.Party[0].Id);
         }
+
+        [Fact]
+        public void EnsureTwoPartyIdsCanBeRetrievedFromAValidXmlFile()
+        {
+            var party = new XmlParty();
+            var pReader = new PartyReader(WorkingXmlPartyFile, new List<IPartyFactory>(), party);
+            Assert.Equal("731db09a-39be-49d8-a75a-bddab653e20d", party.Party[1].Id);
+        }
+
+        [Fact]
+        public void MessageShouldBeAttachedAtThePartyLevel()
+        {
+            var party = new XmlParty();
+            var pReader = new PartyReader(WorkingXmlPartyFile, new List<IPartyFactory>(), party);
+            Assert.Equal("Hello, please come to my party - it will be great", party.Party[0].Message.Trim());
+        }
+
+        [Fact]
+        public void CaptureTheAttendeeId()
+        {
+            var party = new XmlParty();
+            var pReader = new PartyReader(WorkingXmlPartyFile, new List<IPartyFactory>(), party);
+            Assert.Equal("661d4e8f-79d2-4127-a791-7a1c1d27a1d2", party.Party[0].Attendee[0].Id);
+            Assert.Equal("032180d5-1f3b-4e42-bd12-60609f2e61c2", party.Party[0].Attendee[6].Id);
+            Assert.Equal("661d4e8f-79d2-4127-a791-7a1c1d27a1d3", party.Party[1].Attendee[0].Id);
+            Assert.Equal("032180d5-1f3b-4e42-bd12-60609f2e61c3", party.Party[1].Attendee[6].Id);
+        }
+
+        [Fact] public void EnsureThatAStubCanBeCalledViaPartyFactory()
+        {
+            var party = new XmlParty();
+            var mock = new Mock<IElementToPartyTranslator>();
+            var partyFactory = new List<IPartyFactory> { new PartyFactory("TelephoneCall", mock.Object) };
+            var pReader = new PartyReader(WorkingXmlPartyFile, partyFactory, party);
+            mock.Verify(f => f.Translate(), Times.Exactly(8));
+        }
+
+        
     }
+   
 }
