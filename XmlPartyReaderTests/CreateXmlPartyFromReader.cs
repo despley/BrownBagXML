@@ -46,14 +46,14 @@ namespace XmlPartyReaderTests
             Assert.Equal("032180d5-1f3b-4e42-bd12-60609f2e61c3", party.Party[1].Attendee[6].Id);
         }
 
-        [Fact] public void EnsureThatAStubCanBeCalledViaPartyFactory()
-        {
-            var party = new XmlParty();
-            var mock = new Mock<IElementToPartyTranslator>();
-            var partyFactory = new List<IPartyFactory> { new PartyFactory("TelephoneCall", mock.Object) };
-            var pReader = new PartyReader(WorkingXmlPartyFile, partyFactory, party);
-            mock.Verify(f => f.Translate(), Times.Exactly(8));
-        }
+        //[Fact] public void EnsureThatAStubCanBeCalledViaPartyFactory()
+        //{
+        //    var party = new XmlParty();
+        //    var mock = new Mock<IElementToPartyTranslator>();
+        //    var partyFactory = new List<IPartyFactory> { new PartyFactory("TelephoneCall", mock.Object) };
+        //    var pReader = new PartyReader(WorkingXmlPartyFile, partyFactory, party);
+        //    mock.Verify(f => f.Translate(), Times.Exactly(8));
+        //}
 
         
     }

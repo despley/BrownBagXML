@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Attendee.cs" />
     <Compile Include="ElementToTelephoneCall.cs" />
+    <Compile Include="IElementToPartyTranslator.cs" />
     <Compile Include="Invite.cs" />
     <Compile Include="IPartyFactory.cs" />
     <Compile Include="Party.cs" />
@@ -49,6 +50,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XmlParty.cs" />
     <Compile Include="PartyReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XmlFormat\XmlFormat.csproj">
+      <Project>{9C9CCDF7-5C9D-4A56-90B6-0AB4D82B8E2A}</Project>
+      <Name>XmlFormat</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

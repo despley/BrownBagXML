@@ -2,6 +2,6 @@
 {
     public interface IContactable
     {
-        bool Contact();
+        bool Contact(string message);
     }
 }

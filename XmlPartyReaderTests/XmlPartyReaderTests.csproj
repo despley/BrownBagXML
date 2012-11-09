@@ -63,6 +63,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\XmlFormat\XmlFormat.csproj">
+      <Project>{9C9CCDF7-5C9D-4A56-90B6-0AB4D82B8E2A}</Project>
+      <Name>XmlFormat</Name>
+    </ProjectReference>
     <ProjectReference Include="..\XmlPartyReader\XmlPartyUtils.csproj">
       <Project>{8BF3C75E-9864-4B84-A16F-FE5DB09C8076}</Project>
       <Name>XmlPartyUtils</Name>

@@ -2,26 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BadOldCommLib;
 
 namespace XmlFormat
 {
-    class XmlTelephoneCall : IContactable
+    public class XmlTelephoneCall : IContactable
     {
-        public string Message
+        public string NumberToDial { get; set; }
+        public XmlTelephoneCall(string numberToDial)
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            NumberToDial = numberToDial;
         }
-
-        public bool Contact()
+        public bool Contact(string message)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var legacyCommLibTelephone = new Telephone(NumberToDial, message);
+                legacyCommLibTelephone.MakeCall();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                //Log ex
+                System.Diagnostics.Trace.WriteLine(ex.Message);
+                return false;
+            }
         }
     }
 }

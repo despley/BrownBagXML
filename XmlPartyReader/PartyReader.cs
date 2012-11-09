@@ -41,7 +41,7 @@ namespace XmlPartyUtils
         public void BuildXmlPartyElement(IElementToPartyTranslator elementToPartyTranslator, Attendee attendee,
                                          XElement xElement)
         {
-            elementToPartyTranslator.Translate(xElement, attendee);
+            elementToPartyTranslator.Translate(xElement);
         }
 
         //We know the XML is structured to open and close with a party element, therefore it is logical to bounce in and out on these nodes

@@ -20,5 +20,10 @@ namespace XmlFormat
         {
             throw new NotImplementedException();
         }
+
+        public bool Contact(string message)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

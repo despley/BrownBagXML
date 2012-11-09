@@ -1,7 +1,4 @@
-﻿using System.Xml.Linq;
-using XmlPartyUtils;
-
-namespace XmlPartyReader
+﻿namespace XmlPartyReader
 {
     public class PartyFactory : IPartyFactory
     {
@@ -16,10 +13,5 @@ namespace XmlPartyReader
         {
             
         }
-    }
-
-    public interface IElementToPartyTranslator
-    {
-        void Translate(XElement element, Attendee attendee);
     }
 }
