@@ -1,0 +1,11 @@
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormatTests\bin\Debug\XmlFormatTests.dll
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormatTests\bin\Debug\XmlFormatTests.pdb
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormatTests\bin\Debug\XmlFormat.dll
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormatTests\bin\Debug\xunit.dll
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormatTests\bin\Debug\XmlFormat.pdb
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormatTests\bin\Debug\xunit.xml
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormatTests\obj\Debug\XmlFormatTests.csprojResolveAssemblyReference.cache
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormatTests\obj\Debug\XmlFormatTests.dll
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormatTests\obj\Debug\XmlFormatTests.pdb
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormatTests\bin\Debug\XmlPartyInvites.xml
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormatTests\bin\Debug\XmlPartyInvites.xsd

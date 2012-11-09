@@ -1,0 +1,4 @@
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\BadOldCommLib\bin\Debug\BadOldCommLib.dll
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\BadOldCommLib\bin\Debug\BadOldCommLib.pdb
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\BadOldCommLib\obj\Debug\BadOldCommLib.dll
+C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\BadOldCommLib\obj\Debug\BadOldCommLib.pdb
