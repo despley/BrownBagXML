@@ -1,8 +1,0 @@
-<Modules>
-  <Module PersistentId="1F811F43-F190-45C6-A076-B56D38C98277" ModuleId="BadOldCommLib" />
-  <Module PersistentId="B5E39B0A-EDBE-45DE-BB9F-F1EEE7C398FE" ModuleId="TryTheOldStuffOut" />
-  <Module PersistentId="9C9CCDF7-5C9D-4A56-90B6-0AB4D82B8E2A" ModuleId="XmlFormat" />
-  <Module PersistentId="6BB64017-FB17-4538-96EB-2DA68E1504E1" ModuleId="XmlFormatTests" />
-  <Module PersistentId="8BF3C75E-9864-4B84-A16F-FE5DB09C8076" ModuleId="XmlPartyReader" />
-  <Module PersistentId="1126BC05-A634-4D98-A0BC-E9DE9B4C9DA6" ModuleId="XmlPartyReaderTests" />
-</Modules>
