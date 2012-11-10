@@ -1,4 +1,0 @@
-C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlPartyReader\bin\Debug\XmlPartyReader.dll
-C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlPartyReader\bin\Debug\XmlPartyReader.pdb
-C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlPartyReader\obj\Debug\XmlPartyReader.dll
-C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlPartyReader\obj\Debug\XmlPartyReader.pdb

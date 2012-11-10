@@ -1,7 +1,0 @@
-C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormat\bin\Debug\XmlFormat.dll
-C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormat\bin\Debug\XmlFormat.pdb
-C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormat\obj\Debug\XmlFormat.dll
-C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormat\obj\Debug\XmlFormat.pdb
-C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormat\obj\Debug\XmlFormat.csprojResolveAssemblyReference.cache
-C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormat\bin\Debug\BadOldCommLib.dll
-C:\Users\david.espley\Documents\Visual Studio 2010\Projects\BrownBagXML\XmlFormat\bin\Debug\BadOldCommLib.pdb
