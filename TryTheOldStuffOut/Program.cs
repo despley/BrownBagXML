@@ -1,20 +1,20 @@
 ﻿using System;
 using BadOldCommLib;
-using XmlFormat;
 
 namespace TryTheOldStuffOut
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("Hello and Welcome to party broadcaster");
-            
+
             string partyMessage = string.Empty;
             ConsoleKeyInfo consoleKey;
             do
             {
-                Console.WriteLine("\n Please press \n 1. To enter message to broadcast \n 2. Make a telephone call \n 3. Send smoke signals \n 4. Send an old fashioned snail mail \n");
+                Console.WriteLine(
+                    "\n Please press \n 1. To enter message to broadcast \n 2. Make a telephone call \n 3. Send smoke signals \n 4. Send an old fashioned snail mail \n");
                 consoleKey = Console.ReadKey();
                 Console.WriteLine("");
                 switch (consoleKey.KeyChar.ToString())
@@ -37,10 +37,9 @@ namespace TryTheOldStuffOut
                         }
                         catch (Exception ex)
                         {
-                            
                             Console.WriteLine("Failed to make call: {0}", ex.Message);
                         }
-                        
+
                         break;
                     case "3":
                         if (partyMessage == string.Empty)
@@ -49,7 +48,7 @@ namespace TryTheOldStuffOut
                                 "You can't send smoke signals to someone with an empty message, that would just be air");
                             break;
                         }
-                        SmokeSignals s = new SmokeSignals() {WhatToSay = partyMessage};
+                        var s = new SmokeSignals {WhatToSay = partyMessage};
                         s.MakeSomeSmoke();
                         break;
                     case "4":
@@ -59,9 +58,9 @@ namespace TryTheOldStuffOut
                             break;
                         }
                         Console.WriteLine("Please enter the address");
-                        var address = Console.ReadLine();
+                        string address = Console.ReadLine();
                         Console.WriteLine("What type of stamp would you like to use: 1) First class 2) Second class?");
-                        string stampType = Console.ReadKey().ToString();
+                        string stampType = Console.ReadKey().KeyChar.ToString();
                         if (stampType == "1")
                         {
                             new SnailMail(address, SnailMail.Stamp.FirstClass, new Letter(partyMessage)).Post();
@@ -74,16 +73,13 @@ namespace TryTheOldStuffOut
                         }
                         Console.WriteLine("Cannot send letter as an invalid stamp was used");
                         break;
-                 
+
 
                     default:
                         Console.WriteLine("Invalid option selected");
                         break;
                 }
-
-
-            } while (consoleKey.Key != ConsoleKey.Escape) ;
-
+            } while (consoleKey.Key != ConsoleKey.Escape);
         }
     }
 }

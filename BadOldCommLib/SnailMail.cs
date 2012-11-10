@@ -5,16 +5,7 @@ namespace BadOldCommLib
 {
     public class SnailMail
     {
-        private string _address;
-        private Stamp _stamp;
-        private Letter _letter;
-
-        public bool Attending { get; set; }
-        public bool ReplyRecieved
-        {
-            get;
-            set;
-        }
+        #region Stamp enum
 
         public enum Stamp
         {
@@ -22,8 +13,14 @@ namespace BadOldCommLib
             SecondClass = 2,
             ManualDelivery = 3
         };
-        
-        public SnailMail (string address, Stamp stamp, Letter letter)
+
+        #endregion
+
+        private readonly string _address;
+        private readonly Letter _letter;
+        private readonly Stamp _stamp;
+
+        public SnailMail(string address, Stamp stamp, Letter letter)
         {
             _letter = letter;
             _stamp = stamp;
@@ -31,22 +28,25 @@ namespace BadOldCommLib
             Attending = false;
         }
 
+        public bool Attending { get; set; }
+        public bool ReplyRecieved { get; set; }
+
         public bool Post()
         {
             Thread.Sleep(5000);
-            Console.Write(string.Format("Letter posted to: {0} \n Using a {1} stamp \n With the following message {2}", _address, _stamp, _letter));
+            Console.Write(string.Format("Letter posted to: {0} \n Using a {1} stamp \n With the following message {2}",
+                                        _address, _stamp, _letter));
             return true;
         }
-
-
     }
 
     public class Letter
     {
         private string _message;
+
         public Letter(string message)
         {
-            this._message = message;
+            _message = message;
         }
     }
 }

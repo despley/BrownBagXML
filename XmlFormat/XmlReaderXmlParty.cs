@@ -7,7 +7,6 @@ namespace XmlFormat
         public void ReadXmlAndSeeWhereWeGet()
         {
             var reader = new XmlTextReader("XmlPartyInvites.xml");
-            
         }
     }
 }

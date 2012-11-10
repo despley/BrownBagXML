@@ -1,6 +1,5 @@
 using System.Xml.Linq;
 using XmlFormat;
-using XmlPartyUtils;
 
 namespace XmlPartyReader
 {

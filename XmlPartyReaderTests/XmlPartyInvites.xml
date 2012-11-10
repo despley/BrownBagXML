@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<XmlParty 
-  xmlns="http://tempuri.org/XmlPartyInvites.xsd"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://tempuri.org/XmlPartyInvites.xsd XmlPartyInvites.xsd">
+
+<XmlParty xmlns="http://tempuri.org/XmlPartyInvites.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://tempuri.org/XmlPartyInvites.xsd XmlPartyInvites.xsd">
   <Party id="75aaae10-b42f-49db-9cfe-22322e3943a5">
     <Message>
       Hello, please come to my party - it will be great
@@ -12,7 +11,9 @@
         <TelephoneCall>01292488599</TelephoneCall>
       </Attendee>
       <Attendee id="1a4ebb6a-0a7e-4bde-aca3-f158d856c988">
-        <SnailMail class="FirstClass">18 Baker St, London, W12 4TF</SnailMail>
+        <SnailMail class="FirstClass">
+          18 Baker St, London, W12 4TF
+        </SnailMail>
       </Attendee>
       <Attendee id="ad13157f-f683-4e13-a4f9-a15f47dae398">
         <SmokeSignal />
@@ -30,13 +31,19 @@
         <TelephoneCall>01292488599</TelephoneCall>
       </Attendee>
       <Attendee id="3ca9b05f-d686-4258-b40a-ab57f0518f00">
-        <SnailMail class="SecondClass">18 Baker St, London, W12 4TF</SnailMail>
+        <SnailMail class="SecondClass">
+          18 Baker St, London, W12 4TF
+        </SnailMail>
       </Attendee>
       <Attendee id="eb85302a-ab18-4d87-a434-6cae9d450c2c">
-        <SnailMail class="FirstClass">19 Baker St, London, W12 4TF</SnailMail>
+        <SnailMail class="FirstClass">
+          19 Baker St, London, W12 4TF
+        </SnailMail>
       </Attendee>
       <Attendee id="eb85302a-ab18-4d87-a434-6cae9d450e2c">
-        <SnailMail class="HandDelivered">20 Baker St, London, W12 4TF</SnailMail>
+        <SnailMail class="HandDelivered">
+          20 Baker St, London, W12 4TF
+        </SnailMail>
       </Attendee>
     </Invite>
   </Party>
@@ -49,7 +56,9 @@
         <TelephoneCall>01292488599</TelephoneCall>
       </Attendee>
       <Attendee id="1a4ebb6a-0a7e-4bde-aca3-f158d856c988">
-        <SnailMail class="FirstClass">18 Baker St, London, W12 4TF</SnailMail>
+        <SnailMail class="FirstClass">
+          18 Baker St, London, W12 4TF
+        </SnailMail>
       </Attendee>
       <Attendee id="ad13157f-f683-4e13-a4f9-a15f47dae398">
         <SmokeSignal />
@@ -67,13 +76,19 @@
         <TelephoneCall>01292488599</TelephoneCall>
       </Attendee>
       <Attendee id="3ca9b05f-d686-4258-b40a-ab57f0518f00">
-        <SnailMail class="SecondClass">18 Baker St, London, W12 4TF</SnailMail>
+        <SnailMail class="SecondClass">
+          18 Baker St, London, W12 4TF
+        </SnailMail>
       </Attendee>
       <Attendee id="eb85302a-ab18-4d87-a434-6cae9d450c2c">
-        <SnailMail class="FirstClass">19 Baker St, London, W12 4TF</SnailMail>
+        <SnailMail class="FirstClass">
+          19 Baker St, London, W12 4TF
+        </SnailMail>
       </Attendee>
       <Attendee id="eb85302a-ab18-4d87-a434-6cae9d450e2c">
-        <SnailMail class="HandDelivered">20 Baker St, London, W12 4TF</SnailMail>
+        <SnailMail class="HandDelivered">
+          20 Baker St, London, W12 4TF
+        </SnailMail>
       </Attendee>
     </Invite>
   </Party>

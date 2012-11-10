@@ -45,14 +45,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IContactable.cs" />
-    <Compile Include="ILegacyTelephoneCall.cs" />
-    <Compile Include="LegacyTelephoneCall.cs" />
+    <Compile Include="ILegacyTelephoneCallCreator.cs" />
+    <Compile Include="LegacyTelephoneCallCreator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XmlPartyBase.cs" />
     <Compile Include="XmlReaderXmlParty.cs" />
     <Compile Include="XmlSmokeSignals.cs" />
     <Compile Include="XmlSnailMail.cs" />
-    <Compile Include="XmlTelephoneCall.cs" />
+    <Compile Include="LegacyInteropTelephone.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BadOldCommLib\BadOldCommLib.csproj">

@@ -14,10 +14,12 @@ namespace XmlPartyUtils
             {
                 bool finished = false;
                 //get into the XML
-                reader.MoveToContent(); 
+                reader.MoveToContent();
                 do
                 {
-                    while (reader.Name != "Party" && reader.Read()){}
+                    while (reader.Name != "Party" && reader.Read())
+                    {
+                    }
 
                     if (reader.Name == "Party")
                     {
@@ -34,7 +36,9 @@ namespace XmlPartyUtils
 
         public void RetrievePartyMessage(XmlReader reader, Party party)
         {
-            while (reader.Name != "Message" && reader.Read()){}
+            while (reader.Name != "Message" && reader.Read())
+            {
+            }
             party.Message = reader.ReadElementContentAsString();
         }
 
@@ -55,12 +59,13 @@ namespace XmlPartyUtils
                 {
                     if (reader.Name == "Attendee")
                     {
-                       attendee = new Attendee(reader.GetAttribute("id"));
-                       party.Attendee.Add(attendee);
+                        attendee = new Attendee(reader.GetAttribute("id"));
+                        party.Attendee.Add(attendee);
                     }
-                    var translator = partyFactory.Find(p => p.ElementName == reader.Name);
+                    IPartyFactory translator = partyFactory.Find(p => p.ElementName == reader.Name);
                     if (translator != null)
-                        BuildXmlPartyElement(translator.ElementToPartyTranslator, party.Attendee[party.Attendee.Count - 1],
+                        BuildXmlPartyElement(translator.ElementToPartyTranslator,
+                                             party.Attendee[party.Attendee.Count - 1],
                                              XNode.ReadFrom(reader) as XElement);
                 }
             } while (reader.Name != "Party");

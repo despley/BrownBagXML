@@ -1,17 +1,20 @@
-﻿using System;
-using System.Xml.Linq;
+﻿using System.Xml.Linq;
 using XmlFormat;
-using XmlPartyUtils;
 
 namespace XmlPartyReader
 {
     public class ElementToTelephoneCall : IElementToPartyTranslator
     {
-        public ILegacyTelephoneCall LegacyTelephoneCall { get; set; }
-        public ElementToTelephoneCall(ILegacyTelephoneCall legacyTelephoneCall)
+        public ElementToTelephoneCall(ILegacyTelephoneCallCreator legacyTelephoneCall)
         {
             LegacyTelephoneCall = legacyTelephoneCall;
         }
+
+        public ILegacyTelephoneCallCreator LegacyTelephoneCall { get; set; }
+
+        public string NumberToDial { get; set; }
+
+        #region IElementToPartyTranslator Members
 
         public IContactable Translate(XElement element)
         {
@@ -19,7 +22,6 @@ namespace XmlPartyReader
             return LegacyTelephoneCall.CreateContactable(NumberToDial);
         }
 
-        public string NumberToDial { get; set; }
-
+        #endregion
     }
 }

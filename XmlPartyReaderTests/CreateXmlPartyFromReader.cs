@@ -1,12 +1,10 @@
 ﻿using System.Collections.Generic;
-using Moq;
 using XmlPartyReader;
-using Xunit;
 using XmlPartyUtils;
+using Xunit;
 
 namespace XmlPartyReaderTests
 {
-
     public class CreateXmlPartyFromReader
     {
         private const string WorkingXmlPartyFile = "XmlPartyInvites.xml";
@@ -14,8 +12,8 @@ namespace XmlPartyReaderTests
         [Fact]
         public void EnsurePartyReaderCanLoadValidXmlViaPath()
         {
-            var party=new XmlParty();
-            var pReader = new PartyReader(WorkingXmlPartyFile, new List<IPartyFactory>(), party );
+            var party = new XmlParty();
+            var pReader = new PartyReader(WorkingXmlPartyFile, new List<IPartyFactory>(), party);
             Assert.Equal("75aaae10-b42f-49db-9cfe-22322e3943a5", party.Party[0].Id);
         }
 
@@ -54,8 +52,5 @@ namespace XmlPartyReaderTests
         //    var pReader = new PartyReader(WorkingXmlPartyFile, partyFactory, party);
         //    mock.Verify(f => f.Translate(), Times.Exactly(8));
         //}
-
-        
     }
-   
 }

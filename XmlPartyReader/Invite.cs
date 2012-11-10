@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace XmlPartyUtils
+﻿namespace XmlPartyUtils
 {
-    class Invite
+    internal class Invite
     {
     }
 }

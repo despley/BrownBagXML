@@ -34,14 +34,14 @@
       <xs:element name="SnailMail" type="postageType" />
     </xs:choice>
     <xs:attribute name="id" use="required">
-          <xs:simpleType>
-            <xs:restriction base="xs:token">
-              <xs:length fixed="true" value="36" />
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:attribute>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:length fixed="true" value="36" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
   </xs:complexType>
-  
+
   <xs:complexType name="postageType">
     <xs:simpleContent>
       <xs:extension base="xs:string">

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace XmlFormat
 {
@@ -9,22 +6,20 @@ namespace XmlFormat
     {
         public string Message
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
         }
 
-        public bool Contact()
+        #region IContactable Members
+
+        public bool Contact(string message)
         {
             throw new NotImplementedException();
         }
 
-        public bool Contact(string message)
+        #endregion
+
+        public bool Contact()
         {
             throw new NotImplementedException();
         }
