@@ -47,6 +47,7 @@
     <Compile Include="ElementToTelephoneCall.cs" />
     <Compile Include="IContactable.cs" />
     <Compile Include="IElementToPartyTranslator.cs" />
+    <Compile Include="ILegacySmokeSignal.cs" />
     <Compile Include="ILegacySnailMailCreator.cs" />
     <Compile Include="ILegacyTelephoneCallCreator.cs" />
     <Compile Include="IPartyFactory.cs" />

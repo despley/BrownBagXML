@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Xml.Linq;
+using BadOldCommLib;
 using Moq;
 using XmlPartyParser;
 using Xunit;
@@ -51,10 +52,35 @@ namespace XmlPartyParserTests
             XElement element = XElement.Parse("<SnailMail>19 Baker St, London, W12 4TF</SnailMail>");
             var mockSnailMail = new Mock<ILegacySnailMailCreator>();
             IElementToPartyTranslator elementToSnailMail = new ElementToSnailMail(mockSnailMail.Object);
-            Exception ex = Assert.Throws<Exception>(() => elementToSnailMail.Translate(element));
+            var ex = Assert.Throws<Exception>(() => elementToSnailMail.Translate(element));
             Assert.Equal("Class attribute of SnailMail element was null", ex.Message);
-            
         }
 
+        [Fact]
+        public void TestParsedSnailMailCallCanCallLegacyStub()
+        {
+            //I want to create an element that signifies a SnailMail delivery, put the right details in and ensure it will call the underlying legacy class correctly
+            XElement element = XElement.Parse("<SnailMail class=\"FirstClass\">19 Baker St, London, W12 4TF</SnailMail>");
+            var mockSnailMail = new Mock<ILegacySnailMailCreator>();
+            var mockIContactable = new Mock<IContactable>();
+            mockSnailMail.Setup(f => f.CreateContactable("19 Baker St, London, W12 4TF", SnailMail.Stamp.FirstClass)).Returns(mockIContactable.Object);
+            IElementToPartyTranslator elementToSnailMail = new ElementToSnailMail(mockSnailMail.Object);
+            IContactable connectableDevice = elementToSnailMail.Translate(element);
+            connectableDevice.Contact("Hello - Party time");
+            mockSnailMail.Verify(f => f.CreateContactable("19 Baker St, London, W12 4TF", SnailMail.Stamp.FirstClass), Times.AtMostOnce());
+            mockIContactable.Verify(c => c.Contact("Hello - Party time"), Times.AtMostOnce());
+        }
+
+        [Fact]
+        public void TestSmokeSignalCanBeCalled()
+        {
+            XElement element = XElement.Parse("<SmokeSignal />");
+            var mockSmokeSignal = new Mock<ILegacySmokeSignal>();
+            
+            IElementToPartyTranslator elementToSmokeSignal = new ElementToSmokeSignal(mockSmokeSignal.Object);
+            elementToSmokeSignal.Translate(element);
+            
+
+        }
     }
 }
