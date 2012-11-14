@@ -1,4 +1,5 @@
-﻿using System.Xml.Linq;
+﻿using System;
+using System.Xml.Linq;
 using Moq;
 using XmlPartyParser;
 using Xunit;
@@ -43,6 +44,16 @@ namespace XmlPartyParserTests
             var ele = elementToSnailMail as ElementToSnailMail;
             Assert.Equal("FirstClass", ele.PostageClass.ToString());
             Assert.Equal("19 Baker St, London, W12 4TF", ele.Address);
+        }
+        [Fact]
+        public void AssertExceptionThrownWhenClassIsMissingFromSnailMailAttribute()
+        {
+            XElement element = XElement.Parse("<SnailMail>19 Baker St, London, W12 4TF</SnailMail>");
+            var mockSnailMail = new Mock<ILegacySnailMailCreator>();
+            IElementToPartyTranslator elementToSnailMail = new ElementToSnailMail(mockSnailMail.Object);
+            Exception ex = Assert.Throws<Exception>(() => elementToSnailMail.Translate(element));
+            Assert.Equal("Class attribute of SnailMail element was null", ex.Message);
+            
         }
 
     }

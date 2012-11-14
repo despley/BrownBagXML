@@ -1,4 +1,5 @@
-﻿using System.Xml.Linq;
+﻿using System;
+using System.Xml.Linq;
 using BadOldCommLib;
 
 namespace XmlPartyParser
@@ -16,7 +17,11 @@ namespace XmlPartyParser
         public IContactable Translate(XElement element)
         {
             Address = element.Value;
-            PostageClass = SnailMail.Stamp.FirstClass;
+            var attributeStampClass = element.Attribute("class");
+            if (attributeStampClass == null)
+                throw new Exception("Class attribute of SnailMail element was null");
+            var stampClass = attributeStampClass.Value;
+            PostageClass = (SnailMail.Stamp)Enum.Parse(typeof(SnailMail.Stamp), stampClass);
             return LegacySnailMailCreator.CreateContactable(Address, PostageClass);
         }
     }
