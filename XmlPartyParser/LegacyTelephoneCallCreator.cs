@@ -1,6 +1,4 @@
-﻿using XmlPartyParser;
-
-namespace XmlFormat
+﻿namespace XmlPartyParser
 {
     public class LegacyTelephoneCallCreator : ILegacyTelephoneCallCreator
     {

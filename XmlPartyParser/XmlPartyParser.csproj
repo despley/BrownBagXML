@@ -49,20 +49,15 @@
     <Compile Include="IElementToPartyTranslator.cs" />
     <Compile Include="ILegacySnailMailCreator.cs" />
     <Compile Include="ILegacyTelephoneCallCreator.cs" />
-    <Compile Include="Invite.cs" />
     <Compile Include="IPartyFactory.cs" />
     <Compile Include="LegacyInteropTelephone.cs" />
     <Compile Include="LegacySnailMailCreator.cs" />
     <Compile Include="LegacyTelephoneCallCreator.cs" />
     <Compile Include="Party.cs" />
-    <Compile Include="PartyFactory.cs" />
     <Compile Include="PartyReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XmlParty.cs" />
     <Compile Include="XmlPartyBase.cs" />
-    <Compile Include="XmlReaderXmlParty.cs" />
-    <Compile Include="XmlSmokeSignals.cs" />
-    <Compile Include="XmlSnailMail.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BadOldCommLib\BadOldCommLib.csproj">
