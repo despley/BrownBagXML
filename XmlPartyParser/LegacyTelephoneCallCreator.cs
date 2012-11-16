@@ -1,14 +1,15 @@
 ﻿namespace XmlPartyParser
 {
-    public class LegacyTelephoneCallCreator : ILegacyTelephoneCallCreator
+    public class LegacyTelephoneCallCreator : LegacyTelephoneCallCreatorBase
     {
-        #region ILegacyTelephoneCall Members
-
-        public IContactable CreateContactable(string numberToDial)
+        public LegacyTelephoneCallCreator(ContactableTelephonecallLegacyCreatorBase contactableTelephonecallLegacyCreatorBase) : base(contactableTelephonecallLegacyCreatorBase)
         {
-            return new LegacyInteropTelephone(numberToDial);
         }
 
-        #endregion
+        public override IContactable CreateContactable(string numberToDial)
+        {
+            ContactableTelephonecallLegacyCreatorBase.NumberToDial = numberToDial;
+            return ContactableTelephonecallLegacyCreatorBase;
+        }
     }
 }

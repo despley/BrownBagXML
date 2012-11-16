@@ -9,30 +9,17 @@ namespace XmlPartyParserTests
 {
     public class ElementTranslationTests
     {
-        [Fact]
-        public void TestTelephoneCallIsParsedProperly()
-        {
-            XElement element = XElement.Parse("<TelephoneCall>01292488599</TelephoneCall>");
-            var mockLegacyTelehponeCall = new Mock<ILegacyTelephoneCallCreator>();
-            IElementToPartyTranslator elementToTelephoneCall = new ElementToTelephoneCall(mockLegacyTelehponeCall.Object);
-            elementToTelephoneCall.Translate(element);
-            var ele = elementToTelephoneCall as ElementToTelephoneCall;
-            Assert.Equal("01292488599", ele.NumberToDial);
-        }
 
         [Fact]
         public void TestParsedTelephoneCallCanCallLegacyStub()
         {
             //I want to create an element that signifies a telehpone call, put the right details in and ensure it calls the underlying legacy class correctly
             XElement element = XElement.Parse("<TelephoneCall>01292488599</TelephoneCall>");
-            var mockLegacyTelehponeCall = new Mock<ILegacyTelephoneCallCreator>();
-            var mockIContactable = new Mock<IContactable>();
-            mockLegacyTelehponeCall.Setup(f => f.CreateContactable("01292488599")).Returns(mockIContactable.Object);
-            IElementToPartyTranslator elementToTelephoneCall = new ElementToTelephoneCall(mockLegacyTelehponeCall.Object);
-            IContactable connectableDevice = elementToTelephoneCall.Translate(element);
-            connectableDevice.Contact("Hello - Party time");
-            mockLegacyTelehponeCall.Verify(f => f.CreateContactable("01292488599"), Times.AtMostOnce());
-            mockIContactable.Verify(c => c.Contact("Hello - Party time"), Times.AtMostOnce());
+            var mockContactableTelephonecallLegacyCreatorBase = new Mock<ContactableTelephonecallLegacyCreatorBase>();
+            var legacyTelehponeCall = new LegacyTelephoneCallCreator(mockContactableTelephonecallLegacyCreatorBase.Object);
+            IElementToPartyTranslator elementToTelephoneCall = new ElementToTelephoneCall(legacyTelehponeCall);
+            elementToTelephoneCall.Translate(element);
+            mockContactableTelephonecallLegacyCreatorBase.VerifySet(f => f.NumberToDial = "01292488599");
         }
 
         [Fact]
@@ -75,10 +62,13 @@ namespace XmlPartyParserTests
         public void TestSmokeSignalCanBeCalled()
         {
             XElement element = XElement.Parse("<SmokeSignal />");
-            var mockSmokeSignal = new Mock<ILegacySmokeSignal>();
-            
+            var mockSmokeSignal = new Mock<ILegacySmokeSignalCreator>();
+            var mockIcontactable = new Mock<IContactable>();
+            mockSmokeSignal.Setup(f => f.CreateContactable()).Returns(mockIcontactable.Object);
             IElementToPartyTranslator elementToSmokeSignal = new ElementToSmokeSignal(mockSmokeSignal.Object);
-            elementToSmokeSignal.Translate(element);
+            elementToSmokeSignal.Translate(element).Contact("Hello - Party time");
+            mockSmokeSignal.Verify(f => f.CreateContactable(), Times.AtMostOnce());
+            mockIcontactable.Verify(f => f.Contact("Hello - Party time"), Times.AtMostOnce());
             
 
         }

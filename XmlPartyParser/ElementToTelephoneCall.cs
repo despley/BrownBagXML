@@ -4,17 +4,14 @@ namespace XmlPartyParser
 {
     public class ElementToTelephoneCall : IElementToPartyTranslator
     {
-
-        public ILegacyTelephoneCallCreator LegacyTelephoneCall { get; set; }
-        public string NumberToDial { get; set; }
-        public ElementToTelephoneCall(ILegacyTelephoneCallCreator legacyTelephoneCall)
+        public LegacyTelephoneCallCreatorBase LegacyTelephoneCallCreatorBase { get; set; }
+        public ElementToTelephoneCall(LegacyTelephoneCallCreatorBase legacyTelephoneCallCreatorBase)
         {
-            LegacyTelephoneCall = legacyTelephoneCall;
+            LegacyTelephoneCallCreatorBase = legacyTelephoneCallCreatorBase;
         }
         public IContactable Translate(XElement element)
         {
-            NumberToDial = element.Value;
-            return LegacyTelephoneCall.CreateContactable(NumberToDial);
+            return LegacyTelephoneCallCreatorBase.CreateContactable(element.Value);
         }
     }
 }

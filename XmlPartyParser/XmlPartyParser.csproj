@@ -43,17 +43,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attendee.cs" />
+    <Compile Include="ContactableTelephonecallLegacyCreatorBase.cs" />
+    <Compile Include="ElementToSmokeSignal.cs" />
     <Compile Include="ElementToSnailMail.cs" />
     <Compile Include="ElementToTelephoneCall.cs" />
     <Compile Include="IContactable.cs" />
     <Compile Include="IElementToPartyTranslator.cs" />
-    <Compile Include="ILegacySmokeSignal.cs" />
+    <Compile Include="ILegacySmokeSignalCreator.cs" />
     <Compile Include="ILegacySnailMailCreator.cs" />
-    <Compile Include="ILegacyTelephoneCallCreator.cs" />
     <Compile Include="IPartyFactory.cs" />
     <Compile Include="LegacyInteropTelephone.cs" />
     <Compile Include="LegacySnailMailCreator.cs" />
     <Compile Include="LegacyTelephoneCallCreator.cs" />
+    <Compile Include="LegacyTelephoneCallCreatorBase.cs" />
     <Compile Include="Party.cs" />
     <Compile Include="PartyReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
